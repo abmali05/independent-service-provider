@@ -57,7 +57,7 @@ const Register = () => {
                 <label className={`ps-2 ${agree ? '' : 'text-danger'}`} htmlFor="terms">Accept Genius Car Terms and Conditions</label>
                 <input
                     disabled={!agree}
-                    className='w-50 mx-auto btn btn-primary mt-2'
+                    className='w-50 mx-auto btn btn-secondary mt-2'
                     type="submit"
                     value="Register" />
             </form>
