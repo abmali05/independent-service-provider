@@ -20,11 +20,10 @@ const Banner = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h1>Devoted to Justice</h1>
                     <h3>Welcome to Innocent Law Associate</h3>
-                    <p> <span class="bg-light text-dark p-1">I am a lawyer with 20 years of experience</span> </p>
+                    <p> <span class="bg-light text-dark rounded py-1 px-2">Hi! I am David, a lawyer with 20 years of experience</span> </p>
                     <p>Do the right thing the right way. I strongly believe that everyone deserves equal rights.</p>
-                    <button type="button" class="btn btn-light">PLEASE CALL FOR A REQUEST</button>
+                    <button type="button" class="btn btn-light">REQUEST A FREE CONSULTATION</button>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
