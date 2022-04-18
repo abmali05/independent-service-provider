@@ -20,9 +20,9 @@ const Banner = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>Welcome to Innocent Law Associate</h3>
+                    <h4>Welcome to Innocent Law Associate</h4>
                     <p> <span class="bg-light text-dark rounded py-1 px-2">Hi! I am David, a lawyer with 20 years of experience</span> </p>
-                    <p>Do the right thing the right way. I strongly believe that everyone deserves equal rights.</p>
+
                     <button type="button" class="btn btn-light">REQUEST A FREE CONSULTATION</button>
                 </Carousel.Caption>
             </Carousel.Item>
@@ -34,7 +34,7 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h1>Led by the Truth</h1>
+                    <h4>Led by the Truth</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </Carousel.Caption>
             </Carousel.Item>
@@ -46,7 +46,7 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h1>Inspired by the Rights</h1>
+                    <h4>Inspired by the Rights</h4>
                     <p>
                         Praesent commodo cursus magna, vel scelerisque nisl consectetur.
                     </p>
