@@ -1,8 +1,4 @@
 import React from 'react';
-
-import expert1 from '../../../images/experts/expert-1.jpg';
-import expert2 from '../../../images/experts/expert-2.jpg';
-import expert3 from '../../../images/experts/expert-3.jpg';
 import Expert from '../Expert/Expert';
 import './Experts.css';
 

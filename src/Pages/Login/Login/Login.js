@@ -15,7 +15,7 @@ const Login = () => {
     const location = useLocation();
 
     let from = location.state?.from?.pathname || "/";
-    let errorElement;
+    let errorMessage;
     const [
         signInWithEmailAndPassword,
         user,
@@ -34,10 +34,10 @@ const Login = () => {
     }
 
     if (error) {
-        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+        errorMessage = <p className='text-danger'>Error: {error?.message}</p>
     }
 
-    const handleSubmit = event => {
+    const formSubmit = event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
@@ -45,25 +45,25 @@ const Login = () => {
         signInWithEmailAndPassword(email, password);
     }
 
-    const navigateRegister = event => {
+    const navigateToRegister = event => {
         navigate('/register');
     }
 
-    const resetPassword = async () => {
+    const resetPasswordLink = async () => {
         const email = emailRef.current.value;
         if (email) {
             await sendPasswordResetEmail(email);
             toast('Reset password link sent to email');
         }
         else {
-            toast('please enter your email address only');
+            toast('please enter your email only');
         }
     }
 
     return (
         <div className='container w-50 mx-auto'>
             <h2 className=' text-center mt-2'>Please Login</h2>
-            <Form onSubmit={handleSubmit}>
+            <Form onSubmit={formSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
                 </Form.Group>
@@ -74,9 +74,9 @@ const Login = () => {
                     Login
                 </Button>
             </Form>
-            {errorElement}
-            <p>New User? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
-            <p>Forget Password?<button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> <small><i>(Enter your email only)</i></small> </p>
+            {errorMessage}
+            <p>New User? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={navigateToRegister}>Please Register</Link> </p>
+            <p>Forget Password?<button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPasswordLink}>Reset Password</button> <small><i>(Enter your email only)</i></small> </p>
             <SocialLogin></SocialLogin>
             <ToastContainer />
         </div>

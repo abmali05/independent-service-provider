@@ -11,14 +11,14 @@ const Register = () => {
     const [
         createUserWithEmailAndPassword,
         user,
-        loading,
-        error,
+        loading
+
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
-    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+    const [updateProfile, updating] = useUpdateProfile(auth);
 
     const navigate = useNavigate();
 
-    const navigateLogin = () => {
+    const navigateToLogin = () => {
         navigate('/login');
     }
 
@@ -26,11 +26,8 @@ const Register = () => {
         return <Loading></Loading>
     }
 
-    if (user) {
-        console.log('user', user);
-    }
 
-    const handleRegister = async (event) => {
+    const handleUserRegister = async (event) => {
         event.preventDefault();
         const name = event.target.name.value;
         const email = event.target.email.value;
@@ -46,7 +43,7 @@ const Register = () => {
     return (
         <div className='register-form'>
             <h2 style={{ textAlign: 'center' }}>Please Register</h2>
-            <form onSubmit={handleRegister}>
+            <form onSubmit={handleUserRegister}>
                 <input type="text" name="name" id="" placeholder='Your Name' />
 
                 <input type="email" name="email" id="" placeholder='Email Address' required />
@@ -61,7 +58,7 @@ const Register = () => {
                     type="submit"
                     value="Register" />
             </form>
-            <p>Already have an account? <Link to="/login" className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p>
+            <p>Already have an account? <Link to="/login" className='text-primary pe-auto text-decoration-none' onClick={navigateToLogin}>Please Login</Link> </p>
             <SocialLogin></SocialLogin>
         </div>
     );
