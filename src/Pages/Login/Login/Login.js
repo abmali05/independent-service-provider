@@ -53,16 +53,16 @@ const Login = () => {
         const email = emailRef.current.value;
         if (email) {
             await sendPasswordResetEmail(email);
-            toast('Sent email');
+            toast('Reset password link sent to email');
         }
         else {
-            toast('please enter your email address');
+            toast('please enter your email address only');
         }
     }
 
     return (
         <div className='container w-50 mx-auto'>
-            <h2 className='text-primary text-center mt-2'>Please Login</h2>
+            <h2 className=' text-center mt-2'>Please Login</h2>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
@@ -76,7 +76,7 @@ const Login = () => {
             </Form>
             {errorElement}
             <p>New User? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
-            <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
+            <p>Forget Password?<button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> <small><i>(Enter your email only)</i></small> </p>
             <SocialLogin></SocialLogin>
             <ToastContainer />
         </div>
