@@ -1,0 +1,10 @@
+body {
+    min-height: 100vh;
+    ;
+}
+
+.footer-bottom {
+    position: sticky;
+
+    top: 100%
+}

@@ -21,9 +21,9 @@ const Banner = () => {
                 />
                 <Carousel.Caption>
                     <h4>Welcome to Innocent Law Associate</h4>
-                    <p> <span class="bg-light text-dark rounded py-1 px-2">Hi! I am David, a lawyer with 20 years of experience</span> </p>
+                    <p> <span className="bg-light text-dark rounded py-1 px-2">Hi! I am David, a lawyer with 20 years of experience</span> </p>
 
-                    <button type="button" class="btn btn-light">REQUEST A FREE CONSULTATION</button>
+                    <button type="button" className="btn btn-light">REQUEST A FREE CONSULTATION</button>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
